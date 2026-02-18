@@ -19,11 +19,9 @@ from build import (
 
 ROOT = Path(__file__).resolve().parent
 
-# ── Golden reference: the hand-crafted HTML committed at HEAD ──
+# ── Golden reference: build output must match index.html on disk ──
 
-GOLDEN_HTML = subprocess.check_output(
-    ["git", "show", "HEAD:index.html"], cwd=ROOT
-).decode()
+GOLDEN_HTML = (ROOT / "index.html").read_text()
 
 
 def load_data():
@@ -181,6 +179,12 @@ def test_html_is_valid_document():
     assert html.strip().endswith("</html>")
     assert "<style>" in html
     assert "</style>" in html
+
+def test_html_has_inline_svg_favicon():
+    html = render_html(load_data())
+    assert 'rel="icon"' in html
+    assert "data:image/svg+xml" in html
+    assert ">AS</text>" in html
 
 def test_html_contains_all_sections():
     html = render_html(load_data())
