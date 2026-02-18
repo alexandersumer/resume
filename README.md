@@ -34,5 +34,5 @@ Associate Developer. Built a coordinate-based distance/time matrix API with algo
 
 ## Skills & Interests
 
-**Technologies:** Kotlin, Java, TypeScript, Python, Kubernetes, AWS, Kafka, gRPC, Gemini, Playwright
+**Technologies:** Kubernetes, AWS, Kafka, gRPC, Gemini, Playwright, Kotlin, Java, TypeScript, Python, Go
 **Interests:** Reliability engineering, mentoring, agent orchestration, health optimization
