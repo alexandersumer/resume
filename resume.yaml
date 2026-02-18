@@ -42,12 +42,13 @@ experience:
           across sessions.
       - heading: "Unified AI Platform Architecture:"
         text: >-
-          Leading 5 engineers (including 1 principal) to move the platform from
-          a synchronous monolith to a reactive, non-blocking architecture using
-          Kotlin Coroutines. Consolidated redundant HTTP clients into a unified,
-          config-driven client with standardised request caching. Added token-budget
-          validation to reject oversized requests before they reach the model.
-          Introduced a two-tier cache that cut redundant network calls by 99.5%.
+          Leading 5 engineers (including 1 principal) to raise reliability
+          horizontally across all AI products, reducing incident time to
+          recovery by 90%. Moved the platform from a synchronous monolith to a
+          reactive, non-blocking architecture using Kotlin Coroutines. Unified
+          HTTP clients across all integrations with standardised request
+          caching. Added token-budget validation and a two-tier cache that cut
+          redundant network calls by 99.5%.
       - >-
         Built a rollout service for Atlassian's third-largest monorepo, automating
         safe progressive deployments and improving release reliability for hundreds
