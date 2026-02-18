@@ -278,17 +278,22 @@ def render_html(data: dict) -> str:
         education_blocks.append(render_education(entry))
 
     parts = []
-    parts.append("""\
+    name = html_escape(data["name"])
+    title = f"{name} - Resume"
+    summary = html_escape(data["summary"])
+    pages_url = data.get("pages_url", "")
+
+    parts.append(f"""\
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexander Sumer - Resume</title>
-<meta property="og:title" content="Alexander Sumer - Resume">
-<meta property="og:description" content="AI platform engineer at Atlassian, operating at Principal level.">
+<title>{title}</title>
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{summary}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://alexandersumer.github.io/resume/">
+<meta property="og:url" content="{pages_url}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231a1a1a'/><text x='16' y='22.5' font-family='system-ui,-apple-system,sans-serif' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle' letter-spacing='-0.5'>AS</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -302,23 +307,26 @@ def render_html(data: dict) -> str:
 
 <!-- ══════════════ HEADER ══════════════ -->
 <header class="h">""")
-    parts.append(f'  <div class="h-name">{html_escape(data["name"])}</div>')
+    parts.append(f'  <div class="h-name">{name}</div>')
     parts.append(f'  <div class="h-sub">{html_escape(data["location"])}</div>')
 
+    email = html_escape(contact["email"])
+    github = html_escape(contact["github"])
+    linkedin = html_escape(contact["linkedin"])
     contact_line = (
         f'  <div class="h-contact">\n'
         f'    {html_escape(contact["phone"])}\n'
         f'    <span class="d">\u00b7</span>\n'
-        f'    <a href="mailto:{contact["email"]}">{contact["email"]}</a>\n'
+        f'    <a href="mailto:{contact["email"]}">{email}</a>\n'
         f'    <span class="d">\u00b7</span>\n'
-        f'    <a href="https://{contact["github"]}">{contact["github"]}</a>\n'
+        f'    <a href="https://{contact["github"]}">{github}</a>\n'
         f'    <span class="d">\u00b7</span>\n'
-        f'    <a href="https://www.{contact["linkedin"]}">{contact["linkedin"]}</a>\n'
+        f'    <a href="https://www.{contact["linkedin"]}">{linkedin}</a>\n'
         f'  </div>'
     )
     parts.append(contact_line)
     parts.append(
-        f'  <div class="h-pos">{html_escape(data["summary"])}</div>'
+        f'  <div class="h-pos">{summary}</div>'
     )
     parts.append("</header>")
 

@@ -186,6 +186,15 @@ def test_html_has_inline_svg_favicon():
     assert "data:image/svg+xml" in html
     assert ">AS</text>" in html
 
+def test_html_og_tags_data_driven():
+    data = load_data()
+    html = render_html(data)
+    assert f'og:title" content="{data["name"]} - Resume"' in html
+    assert f'og:url" content="{data["pages_url"]}"' in html
+    assert 'og:description" content="' in html
+    # OG description should contain start of summary
+    assert data["summary"][:40] in html
+
 def test_html_contains_all_sections():
     html = render_html(load_data())
     assert "HEADER" in html
