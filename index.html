@@ -40,7 +40,7 @@
   a:hover{text-decoration:underline}
 
   /* ════════════ HEADER ════════════ */
-  .h{text-align:center;padding-bottom:3mm}
+  .h{text-align:center;padding-bottom:1.5mm}
 
   .h-name{
     font-size:25pt;
@@ -51,7 +51,7 @@
   }
 
   .h-sub{
-    margin-top:1mm;
+    margin-top:0.3mm;
     font-size:9pt;
     font-weight:400;
     color:#888;
@@ -59,7 +59,7 @@
   }
 
   .h-contact{
-    margin-top:1.5mm;
+    margin-top:0.8mm;
     font-size:8.5pt;
     font-weight:400;
     color:#444;
@@ -73,7 +73,7 @@
   }
 
   .h-pos{
-    margin-top:1.5mm;
+    margin-top:0.8mm;
     font-size:9.5pt;
     font-weight:400;
     color:#555;
@@ -151,6 +151,7 @@
     line-height:1.4;
   }
   ul.b li+li{margin-top:0.8mm}
+  ul.b li.proj{margin-top:1.5mm}
   ul.b li::before{
     content:"–";
     position:absolute;
@@ -165,13 +166,19 @@
 
   /* ════════════ EARLIER ROLES ════════════ */
   .earlier{
-    margin-top:2mm;
+    margin-top:1.5mm;
   }
-  .earlier .e-row{margin-bottom:0}
+  .earlier-head{
+    font-size:9.5pt;
+    color:#444;
+  }
+  .earlier-head strong{
+    color:#1a1a1a;
+  }
   .earlier-note{
     font-size:9pt;
     color:#555;
-    margin-top:0.5mm;
+    margin-top:0.3mm;
     line-height:1.4;
     padding-left:14px;
   }
@@ -238,28 +245,22 @@
     </div>
     <ul class="b">
       <li>Promoted to Senior within two years, now operating at Principal level. Highest change throughput, review volume, and lowest incident rate in the org while leading 9 engineers across three projects.</li>
-      <li><strong>Autonomous Browser Agent:</strong> Led 5 engineers (including 2 seniors) building a system where a vision-language model (Gemini) interprets browser screenshots and returns coordinate-based commands via Playwright/CDP. Designed warm pod pools for sub-second session start, HMAC-signed routing, and per-session container isolation. Topped internal evals; completed complex compliance workflows end-to-end.</li>
-      <li><strong>Agent Sandbox:</strong> Built a new execution platform supporting session hibernation with disk-backed state, 20&#8201;GB persistent volumes, and hardware-level isolation via KATA Containers (lightweight VMs). Replaced a legacy service that had no file system and scaled poorly (linear namespace scan). Agents can now generate files, produce charts, and resume across sessions.</li>
-      <li><strong>Unified AI Platform Architecture:</strong> Leading 5 engineers (including 1 principal) to raise reliability horizontally across all AI products, reducing average incident time to recovery from 10 hours to 1. Moved the platform from a synchronous monolith to a reactive, non-blocking architecture using Kotlin Coroutines. Unified HTTP clients across all integrations with standardised request caching. Added a two-tier cache that cut redundant network calls by 90%.</li>
+      <li class="proj"><strong>Autonomous Browser Agent:</strong> Led 5 engineers (including 2 seniors) building a system where a vision-language model (Gemini) interprets browser screenshots and returns coordinate-based commands via Playwright/CDP. Designed warm pod pools for sub-second session start, HMAC-signed routing, and per-session container isolation. Topped internal evals; completed complex compliance workflows end-to-end.</li>
+      <li class="proj"><strong>Agent Sandbox:</strong> Built a new execution platform supporting session hibernation with disk-backed state, 20&#8201;GB persistent volumes, and hardware-level isolation via KATA Containers (lightweight VMs). Replaced a legacy service that had no file system and scaled poorly (linear namespace scan). Agents can now generate files, produce charts, and resume across sessions.</li>
+      <li class="proj"><strong>Unified AI Platform Architecture:</strong> Leading 5 engineers (including 1 principal) to raise reliability horizontally across all AI products, reducing average incident time to recovery from 10 hours to 1. Moved the platform from a synchronous monolith to a reactive, non-blocking architecture using Kotlin Coroutines. Unified HTTP clients across all integrations with standardised request caching. Added a two-tier cache that cut redundant network calls by 90%.</li>
       <li>Built a rollout service for Atlassian's third-largest monorepo, automating safe progressive deployments and improving release reliability for hundreds of engineers.</li>
-      <li><strong>Jira Issue Service:</strong> Built from inception a 99.999%-reliability, low-latency platform service powering multiple Atlassian products. Proposed and gained Principal-level buy-in for a persistence layer on the Mercury Cache library. Led the real-time Issue Event Stream with at-least-once delivery. Parallelized authorization checks for a 20× P90 latency improvement. Redesigned queries and caching to cut P99 latency from 10s to 200ms for the largest customers.</li>
+      <li class="proj"><strong>Jira Issue Service:</strong> Built from inception a 99.999%-reliability, low-latency platform service powering multiple Atlassian products. Proposed and gained Principal-level buy-in for a persistence layer on the Mercury Cache library. Led the real-time Issue Event Stream with at-least-once delivery. Parallelized authorization checks for a 20× P90 latency improvement. Redesigned queries and caching to cut P99 latency from 10s to 200ms for the largest customers.</li>
     </ul>
   </div>
 
   <div class="earlier">
-    <div class="e-row">
-      <span class="e-org">Sympli</span>
-      <span class="e-date">Oct 2018 – Jul 2019</span>
-    </div>
-    <div class="earlier-note">Developer. Built a server-side form generator (JSON → React) for electronic real estate transactions, a serverless healthcheck service (Lambda, SNS), and introduced unit testing standards across the team.</div>
+    <div class="earlier-head"><strong>Sympli</strong> · Developer · Oct 2018 – Jul 2019</div>
+    <div class="earlier-note">Built a server-side form generator (JSON → React) for electronic real estate transactions, a serverless healthcheck service (Lambda, SNS), and introduced unit testing standards across the team.</div>
   </div>
 
   <div class="earlier">
-    <div class="e-row">
-      <span class="e-org">WiseTech Global</span>
-      <span class="e-date">Aug 2017 – Sep 2018</span>
-    </div>
-    <div class="earlier-note">Associate Developer. Built a coordinate-based distance/time matrix API with algorithm selection based on graph structure. Replaced SQL literals with table-valued parameters for a 4× query performance improvement.</div>
+    <div class="earlier-head"><strong>WiseTech Global</strong> · Associate Developer · Aug 2017 – Sep 2018</div>
+    <div class="earlier-note">Built a coordinate-based distance/time matrix API with algorithm selection based on graph structure. Replaced SQL literals with table-valued parameters for a 4× query performance improvement.</div>
   </div>
 </section>
 

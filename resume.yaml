@@ -65,16 +65,18 @@ experience:
   - company: Sympli
     dates: Oct 2018 – Jul 2019
     earlier: true
+    role: Developer
     note: >-
-      Developer. Built a server-side form generator (JSON → React) for
+      Built a server-side form generator (JSON → React) for
       electronic real estate transactions, a serverless healthcheck service
       (Lambda, SNS), and introduced unit testing standards across the team.
 
   - company: WiseTech Global
     dates: Aug 2017 – Sep 2018
     earlier: true
+    role: Associate Developer
     note: >-
-      Associate Developer. Built a coordinate-based distance/time matrix API
+      Built a coordinate-based distance/time matrix API
       with algorithm selection based on graph structure. Replaced SQL literals
       with table-valued parameters for a 4× query performance improvement.
 

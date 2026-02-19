@@ -32,7 +32,7 @@ CSS = """\
   a:hover{text-decoration:underline}
 
   /* ════════════ HEADER ════════════ */
-  .h{text-align:center;padding-bottom:3mm}
+  .h{text-align:center;padding-bottom:1.5mm}
 
   .h-name{
     font-size:25pt;
@@ -43,7 +43,7 @@ CSS = """\
   }
 
   .h-sub{
-    margin-top:1mm;
+    margin-top:0.3mm;
     font-size:9pt;
     font-weight:400;
     color:#888;
@@ -51,7 +51,7 @@ CSS = """\
   }
 
   .h-contact{
-    margin-top:1.5mm;
+    margin-top:0.8mm;
     font-size:8.5pt;
     font-weight:400;
     color:#444;
@@ -65,7 +65,7 @@ CSS = """\
   }
 
   .h-pos{
-    margin-top:1.5mm;
+    margin-top:0.8mm;
     font-size:9.5pt;
     font-weight:400;
     color:#555;
@@ -143,6 +143,7 @@ CSS = """\
     line-height:1.4;
   }
   ul.b li+li{margin-top:0.8mm}
+  ul.b li.proj{margin-top:1.5mm}
   ul.b li::before{
     content:"–";
     position:absolute;
@@ -157,13 +158,19 @@ CSS = """\
 
   /* ════════════ EARLIER ROLES ════════════ */
   .earlier{
-    margin-top:2mm;
+    margin-top:1.5mm;
   }
-  .earlier .e-row{margin-bottom:0}
+  .earlier-head{
+    font-size:9.5pt;
+    color:#444;
+  }
+  .earlier-head strong{
+    color:#1a1a1a;
+  }
   .earlier-note{
     font-size:9pt;
     color:#555;
-    margin-top:0.5mm;
+    margin-top:0.3mm;
     line-height:1.4;
     padding-left:14px;
   }
@@ -209,7 +216,7 @@ def render_bullet(b) -> str:
         return f"      <li>{html_escape(b)}</li>"
     heading = html_escape(b["heading"])
     text = html_escape(b["text"])
-    return f"      <li><strong>{heading}</strong> {text}</li>"
+    return f'      <li class="proj"><strong>{heading}</strong> {text}</li>'
 
 
 def render_bullets(bullets) -> str:
@@ -234,13 +241,14 @@ def render_experience_full(entry) -> str:
 
 
 def render_experience_earlier(entry) -> str:
+    company = html_escape(entry["company"])
+    role = html_escape(entry["role"])
+    dates = html_escape(entry["dates"])
+    note = html_escape(entry["note"])
     lines = []
     lines.append('  <div class="earlier">')
-    lines.append('    <div class="e-row">')
-    lines.append(f'      <span class="e-org">{html_escape(entry["company"])}</span>')
-    lines.append(f'      <span class="e-date">{html_escape(entry["dates"])}</span>')
-    lines.append("    </div>")
-    lines.append(f'    <div class="earlier-note">{html_escape(entry["note"])}</div>')
+    lines.append(f'    <div class="earlier-head"><strong>{company}</strong> \u00b7 {role} \u00b7 {dates}</div>')
+    lines.append(f'    <div class="earlier-note">{note}</div>')
     lines.append("  </div>")
     return "\n".join(lines)
 
@@ -391,7 +399,7 @@ def render_md(data: dict) -> str:
     lines.append("")
     for entry in data["experience"]:
         if entry.get("earlier"):
-            lines.append(f"**{entry['company']}** · *{entry['dates']}*")
+            lines.append(f"**{entry['company']}** · {entry['role']} · *{entry['dates']}*")
             lines.append("")
             lines.append(entry["note"])
             lines.append("")

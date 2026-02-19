@@ -16,13 +16,13 @@ Sydney, NSW, Australia · (+61) 461 333 867 · [alexandersumer7@gmail.com](mailt
 - Built a rollout service for Atlassian's third-largest monorepo, automating safe progressive deployments and improving release reliability for hundreds of engineers.
 - **Jira Issue Service:** Built from inception a 99.999%-reliability, low-latency platform service powering multiple Atlassian products. Proposed and gained Principal-level buy-in for a persistence layer on the Mercury Cache library. Led the real-time Issue Event Stream with at-least-once delivery. Parallelized authorization checks for a 20× P90 latency improvement. Redesigned queries and caching to cut P99 latency from 10s to 200ms for the largest customers.
 
-**Sympli** · *Oct 2018 – Jul 2019*
+**Sympli** · Developer · *Oct 2018 – Jul 2019*
 
-Developer. Built a server-side form generator (JSON → React) for electronic real estate transactions, a serverless healthcheck service (Lambda, SNS), and introduced unit testing standards across the team.
+Built a server-side form generator (JSON → React) for electronic real estate transactions, a serverless healthcheck service (Lambda, SNS), and introduced unit testing standards across the team.
 
-**WiseTech Global** · *Aug 2017 – Sep 2018*
+**WiseTech Global** · Associate Developer · *Aug 2017 – Sep 2018*
 
-Associate Developer. Built a coordinate-based distance/time matrix API with algorithm selection based on graph structure. Replaced SQL literals with table-valued parameters for a 4× query performance improvement.
+Built a coordinate-based distance/time matrix API with algorithm selection based on graph structure. Replaced SQL literals with table-valued parameters for a 4× query performance improvement.
 
 ## Education
 
