@@ -36,4 +36,4 @@ Built a coordinate-based distance/time matrix API with algorithm selection based
 ## Skills & Interests
 
 **Technologies:** Kubernetes, AWS, Kafka, gRPC, Gemini, Playwright, Kotlin, Java, TypeScript, Python, Go
-**Interests:** Reliability engineering, mentoring, agent orchestration, health optimization
+**Interests:** AI, volleyball, cooking, fitness, good conversations
