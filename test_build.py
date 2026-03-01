@@ -259,7 +259,7 @@ def test_yaml_bullets_polymorphic():
 
 def test_md_starts_with_name():
     md = render_md(load_data())
-    assert md.startswith("# Alexander Sumer")
+    assert "# Alexander Sumer" in md
 
 def test_md_contains_no_html():
     md = render_md(load_data())

@@ -376,6 +376,9 @@ def render_html(data: dict) -> str:
 def render_md(data: dict) -> str:
     contact = data["contact"]
     lines = []
+    pages_url = data.get("pages_url", "")
+    lines.append(f"[**View resume**]({pages_url})")
+    lines.append("")
     lines.append(f"# {data['name']}")
     lines.append("")
     lines.append(

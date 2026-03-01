@@ -1,3 +1,5 @@
+[**View resume**](https://alexandersumer.github.io/resume/)
+
 # Alexander Sumer
 
 Sydney, NSW, Australia · [GitHub](https://github.com/alexandersumer) · [LinkedIn](https://www.linkedin.com/in/alexandersumer)
