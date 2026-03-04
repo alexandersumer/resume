@@ -308,7 +308,7 @@ def render_html(data: dict) -> str:
 <meta property="og:description" content="{summary}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{pages_url}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231a1a1a'/><text x='16' y='22.5' font-family='system-ui,-apple-system,sans-serif' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle' letter-spacing='-0.5'>AS</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>text{{fill:%23242424;font-family:'Inter',system-ui,sans-serif;font-weight:700}}@media(prefers-color-scheme:dark){{text{{fill:%23f0f0f0}}}}</style><text x='50' y='78' font-size='80' text-anchor='middle'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">

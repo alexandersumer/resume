@@ -184,7 +184,7 @@ def test_html_has_inline_svg_favicon():
     html = render_html(load_data())
     assert 'rel="icon"' in html
     assert "data:image/svg+xml" in html
-    assert ">AS</text>" in html
+    assert ">A</text>" in html
 
 def test_html_og_tags_data_driven():
     data = load_data()
